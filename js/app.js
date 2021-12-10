@@ -68,6 +68,7 @@ if (doIWoodwork === 'yes' || doIWoodwork === 'y') {
   //console.log('Please enter a Yes or No for your answer');
   alert('Please enter a Yes or No for your answer');
 }
+
 alert('You got ' +counter+ ' out of 5 correct.');
 let userName = prompt('Thank you for answering these questions.  What is your name?');
 alert('Welcome to my site ' +userName+ '!');

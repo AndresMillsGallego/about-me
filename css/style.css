@@ -5,72 +5,73 @@ body {
 header {
   text-align: center;
   border: solid darkred;
-  margin: 10px;
-  padding: 20px;
+  margin: 1rem;
+  padding: 1rem;
   background-color: aliceblue;
-  box-shadow: 5px 10px 20px;
+  box-shadow: .5rem 1.5rem 2.5rem;
 }
 h1 {
-  font-size: 100px;
+  font-size: 8rem;
   color: crimson;
  }
  h2 {
-   font-size: 30px;
+   font-size: 2rem;
    color:midnightblue;
-   padding-top: 10px;
+   padding-top: 1rem;
    
  }
  h3 {
-   font-size: 40px;
+   font-size: 4rem;
    color: crimson;
    text-align: center;
  }
 section {
   overflow: hidden;
-  padding: 30px;
-  margin: 30px;
+  padding: 2rem;
+  margin: 2rem;
   border: solid darkred;
   background-color: aliceblue;
-  box-shadow: 5px 10px 20px;
+  box-shadow: .5rem 1.5rem 2.5rem;
 }
 div {
-  padding: 25px;
-  margin: 25px;
+  padding: 1rem;
+  margin: 1rem;
   border: solid darkred;
   background-color: aliceblue;
-  box-shadow: 5px 10px 20px;
+  box-shadow: .5rem 1.5rem 2.5rem;
 }
 p {
-  padding-left: 10px;
-  padding-top: 20px;
+  padding-left: 1rem;
+  padding-top: 1rem;
   color:midnightblue;
-  font-size: 30px;
+  font-size: 2rem;
 }
 #imgA {
   width: 400px;
   float: left;
-  padding: 10px;
-  margin: 10px;
+  padding: 1rem;
+  margin: 1rem;
 }
 ul {
-  margin-left: 20px;
-  padding-top: 10px;
-  font-size: larger;
+  margin-left: 2rem;
+  padding-top: 1rem;
+  font-size: 1.5rem;
   list-style-type: disc;
 }
 li {
-  padding-top: 15px;
+  padding-top: 1rem;
   color:midnightblue;
 }
 .image {
-  width: 32%;
-  padding: 5px;
+  width: 30%;
+  padding: 1rem;
 }
 footer {
   text-align: center;
+  padding-bottom: 1rem;
 }
 .button {
-  width: 200px;
+  width:max-content;
   font-size: xx-large;
   color: crimson;
   background-color: aliceblue;

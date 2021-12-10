@@ -81,6 +81,6 @@ function goodbyeMessage() {
 
 // eslint-disable-next-line no-unused-vars
 function highScore(){
-  alert('You scored ' +counter+ ' out of five.');
+  alert('You scored ' +counter+ ' out of 5.');
 }
 

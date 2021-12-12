@@ -9,16 +9,27 @@
   <body>
     <header>
       <h1>About Me</h1>
-      <h2>Welcome to my page!  Thank you for answering my questions.  How many did you get right?</h2>
+      <b>Welcome to my page!  Thank you for answering my questions.  How many did you get right?</b>
     </header>
   <main>
     <section>
-      <h3>So Who Am I?</h3>
+      <h2 class="sub-headers">So Who Am I?</h2>
         <img id="imgA" src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.6435-9/118309572_10224576309945060_3554128197398275488_n.jpg?_nc_cat=104&ccb=1-5&_nc_sid=730e14&_nc_ohc=Tm1GFY9nbakAX8nA2GV&_nc_ht=scontent-sea1-1.xx&oh=a89ad9512d389f2b24b877e59e7414ab&oe=61D521A2" alt="Its me!">
-        <p>My name is Andres Mills Gallego and as you may have guessed correctly, I was not born in the US, I am from Colombia originally.  I didn't study much post high school in terms of formal education, but I was (and still am) heavily involved in the construction industry.  Working with the family business I learned the skills of my craft as well as developed extensive knowledge in the business side of things.  Woodworking was always something that I enjoyed.  I love being able to take a raw material and shape it into something new, beautiful and interesting!  I have always strived to improve and to continue to learn as much as I can.  I started my own woodworking business about 16 years ago and have been lucky enough to be able to shape it into a business that I am proud of.  I am currently studying computer science and web development.  I look forward to utilizing my current skillset to learn as much as I can in the months to come!</p>
+        <b>My name is Andres Mills Gallego and as you may have guessed correctly, I was not born in the US and am from Colombia     originally.  Regarding my education and work history:</b>
+          <ul> <!--Made this list for lab 03-->
+            <li>I did not have much in the way of formal education post high school</li>
+            <li>I started working in my family business from a young age.  I started working in the family business when I was 13 years old (weekends and summers of course)</li> <!-- Don't delete this lol, its the trailing tag for that^-->
+            <li>After many years spent honing my skills in woodworking I decided to start my own business</li>
+            <li>I have had my business for 16 years and continue to learn each and every day</li>
+            <li>Fun Fact:  I finished my last year of high school in the running start program and began the process of completing my AA degree</li>
+            <li>I recently decided to return to Seattle Central and complete what I started over 20 years ago</li>
+          </ul>
+
+        <!-- <p>My name is Andres Mills Gallego and as you may have guessed correctly, I was not born in the US, I am from Colombia originally.  I didn't study much post high school in terms of formal education, but I was (and still am) heavily involved in the construction industry.  Working with the family business I learned the skills of my craft as well as developed extensive knowledge in the business side of things.  Woodworking was always something that I enjoyed.  I love being able to take a raw material and shape it into something new, beautiful and interesting!  I have always strived to improve and to continue to learn as much as I can.  I started my own woodworking business about 16 years ago and have been lucky enough to be able to shape it into a business that I am proud of.  I am currently studying computer science and web development.  I look forward to utilizing my current skillset to learn as much as I can in the months to come!</p> -->
+
     </section>
     <section>
-      <h3>A bit more about me......</h3>
+      <h3 class="sub-headers">A bit more about me......</h3> <!--Made the class sub headers to manipulate all but the main one.-->
         <ul>
           <li>Its true, I absolutely love Sushi!  It is one of my favorite foods (it may actually be my #1).</li>
           <li>I was born in Colombia, but moved to the United States as a child.  My family still went back every year to visit and because of that both countries feel like home to me.</li>
@@ -32,6 +43,21 @@
         <img class="image" src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.6435-9/78334973_10221824360988056_8724278909866082304_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=174925&_nc_ohc=Y1JhKHtheNkAX_6xEkf&_nc_ht=scontent-sea1-1.xx&oh=ea4266fa5bd9dace41cacd117b264f63&oe=61D602BC" alt="Me and Pluto">
         <img class="image" src="https://scontent-sea1-1.xx.fbcdn.net/v/t1.18169-9/20108326_10214298105396370_8751164030465219193_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=a9b1d2&_nc_ohc=a0pqggG6ThAAX-DE_TU&_nc_ht=scontent-sea1-1.xx&oh=5aa5e46b3656327b582cff7c91f8216b&oe=61D86AFC" alt="Colombia">
       </div>
+      <section id="top-10-list">
+        <h4 class="sub-headers">My top 10 Disney Park Rides</h4>
+          <ol>
+            <li>Splash Mountain</li>
+            <li>Guardians of the Galaxy</li>
+            <li>Pirates of the Caribbean</li>
+            <li>Hyperspace Mountain</li>
+            <li>Incredicoaster</li>
+            <li>Slinky Dog Dash</li>
+            <li>Peter Pan's Flight</li>
+            <li>Haunted Mansion(Manor)</li>
+            <li>Grizzly River Run</li>
+            <li>Seven Dwarfs Mine Train</li>
+          </ol>
+      </section>
       <footer>
         <input class="button" type="button" value="Click Here" onClick="goodbyeMessage()">
         <input class="button" type="button" value="Your Score" onClick="highScore()">

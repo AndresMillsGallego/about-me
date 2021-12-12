@@ -2,6 +2,7 @@ body {
   background-color:cornflowerblue;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
+
 header {
   text-align: center;
   border: solid darkred;
@@ -10,21 +11,27 @@ header {
   background-color: aliceblue;
   box-shadow: .5rem 1.5rem 2.5rem;
 }
+
 h1 {
   font-size: 8rem;
   color: crimson;
+  margin: 1rem;
  }
- h2 {
-   font-size: 2rem;
-   color:midnightblue;
-   padding-top: 1rem;
-   
- }
- h3 {
+
+.sub-headers {
    font-size: 4rem;
    color: crimson;
    text-align: center;
+   margin: 1rem;
  }
+ 
+ b {
+   font-size: 2rem;
+   color: midnightblue;
+   padding: 2rem;
+   margin: 2rem;
+ }
+
 section {
   overflow: hidden;
   padding: 2rem;
@@ -33,46 +40,73 @@ section {
   background-color: aliceblue;
   box-shadow: .5rem 1.5rem 2.5rem;
 }
+
 div {
   padding: 1rem;
   margin: 1rem;
   border: solid darkred;
   background-color: aliceblue;
   box-shadow: .5rem 1.5rem 2.5rem;
+  
 }
+
 p {
   padding: 1rem;
   color:midnightblue;
   font-size:2rem;
   line-height: 1.25;
 }
+
 #imgA {
   width:425px;
   float: left;
   padding: 1rem;
+  margin-right: 2rem;
 }
+
 ul {
   margin-left: 2rem;
   padding-top: 1rem;
   font-size: 1.5rem;
   list-style-type: disc;
 }
+
+ol {
+  margin-left: 10rem;
+  padding-top: 1rem;
+  font-size: 1.5rem; 
+  list-style-type:decimal;
+}
+
 li {
   padding-top: 1rem;
   color:midnightblue;
   line-height: 1.5;
 }
+
+#top-10-list {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 2rem;
+}
 .image {
   width: 30%;
-  padding: 1rem;
+  margin:auto;
+  padding:1rem;
 }
+
 footer {
   text-align: center;
-  padding-bottom: 1rem;
+  padding: 1rem;
+  margin: 1rem;
 }
+
 .button {
   width:max-content;
-  font-size: xx-large;
+  font-size: 2rem;
   color: crimson;
   background-color: aliceblue;
+  margin: 1rem;
+  padding: .5rem;
 }

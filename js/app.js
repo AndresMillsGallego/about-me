@@ -115,11 +115,11 @@ while (userGuesses < 6 && !answeredCorrectly) {
   }
   userGuesses++;
   if (userGuesses === 6) {
-    alert('Dang!  You ran out of guesses.'); // Made sense to stick with the theme and add an alert for this. 
+    alert('Dang!  You ran out of guesses.'); // Made sense to stick with the theme and add an alert for this.
   }
 }
 
-alert('Here is a full list of my favorite foods ' +favoriteFoods); // I can see why .join() would come in real handy here.
+alert('Here is a full list of my favorite foods' +favoriteFoods); // I can see why .join() would come in real handy here.
 
 // Below I coded 3 different options based on the user's score
 if (counter <= 2) {

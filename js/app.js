@@ -8,7 +8,7 @@ alert('Please answer the following questions. (Yes/No answers please');
 
 let counter = 0;
 let wasIBornHere = prompt('Was I born in the United States?').toLowerCase();
-
+//console.log(wasIBornHere);
 if (wasIBornHere === 'yes' || wasIBornHere === 'y') {
   //console.log
   alert('That is incorrect.  I was born in Colombia.');
@@ -77,15 +77,18 @@ alert('I will give you one for free...I am currently married.');
 
 let myMarriageLength = 20;
 //let marriageGuessCounter = 0; //Going to work on this later....
+let marriageGuesses = 3; // Working on this now! 12/13/21
 for (let guesses = 0; guesses < 4; guesses++) {
   let howLongHaveIBeenMarried = prompt('How long do you think I have been married? (Enter number of years)');
   let howLongHaveIBeenMarriedInt = parseInt(howLongHaveIBeenMarried);
   if (howLongHaveIBeenMarriedInt < myMarriageLength) {
-    alert('That is too low');
+    alert(`That is too low.  You have ${marriageGuesses} left.`);
+    marriageGuesses--;
   } else if (howLongHaveIBeenMarriedInt > myMarriageLength) {
-    alert('That is too high');
+    alert(`That is too high.  You have ${marriageGuesses} left.`);
+    marriageGuesses--;
   } else if (howLongHaveIBeenMarriedInt === myMarriageLength) {
-    alert('That is correct!  Good Job.');
+    alert(`That is just right, and correct!  I have been married for ${myMarriageLength} years.`);
     counter++;
     break;
   } else {
@@ -108,18 +111,18 @@ while (userGuesses < 6 && !answeredCorrectly) {
   for (let x = 0; x < favoriteFoods.length; x++) {
     if (favoriteFoods[x] === foodGuess) {
       let correctGuess = foodGuess;
-      alert('That is correct! ' + correctGuess + ' is one of my favorite foods');
+      alert(`That is correct, ${correctGuess} is one of my favorite foods!   My favorite foods are ${favoriteFoods.slice(0,3).join(', ')}, and ${favoriteFoods[4]}.`);
       answeredCorrectly = true;
       counter++;
     }
   }
   userGuesses++;
   if (userGuesses === 6) {
-    alert('Dang!  You ran out of guesses.'); // Made sense to stick with the theme and add an alert for this.
+    alert(`Dang!  You ran out of guesses.  My favorite foods are ${favoriteFoods.slice(0,3).join(', ')}, and ${favoriteFoods[4]}.`); // Made sense to stick with the theme and add an alert for this. Also changed the alert for this and the correct guess to include the array.  Messed around with.slice and .join to make the sentence read more like normal English.
   }
 }
-
-alert('Here is a full list of my favorite foods' +favoriteFoods); // I can see why .join() would come in real handy here.
+// let favoriteFoodsString = favoriteFoods.join(', ');
+// alert(`Here is a full list of my favorite foods ${favoriteFoodsString}.`); // I did follow the assignment instructions and I did not add this function til after I already turned in Lab 03 (looks so much better now)  :)
 
 // Below I coded 3 different options based on the user's score
 if (counter <= 2) {
@@ -134,7 +137,7 @@ alert('Ok, one last guessing game.  You have 3 tries only this time!');
 
 let correctNumber = Math.floor(Math.random() * 10 + 1); //generates the random number
 console.log(correctNumber); //console log it to make sure its working!
-
+let userNumGuess = 3;
 for (let n = 0; n < 3; n++) {
   let numGuess = prompt('I am thinking of a number between 1-10. What do you think it is?');
   let guessInt = parseInt(numGuess);
@@ -142,8 +145,11 @@ for (let n = 0; n < 3; n++) {
     alert('Yes!  Excellent guess!');
     break;
   } else if (guessInt !== correctNumber) {
-    alert('Not quite, try again.');
+    alert(`Hmmm, not quite, you have ${userNumGuess-1} guesses left.`);
+    userNumGuess--;
   } // Want to add a message to user if all guesses are used up, then tell them the correct number.
+} if (userNumGuess === 0) {
+  alert(`Good guesses!  My number was actually ${correctNumber}`);
 }
 
 //The following two functions are used and called on the main HTML page.  Maybe there is a better way to write this?

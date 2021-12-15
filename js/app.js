@@ -56,19 +56,22 @@ function doILikeSushi() {
 }
 doILikeSushi();
 
-let iLoveToTravel = prompt('Do I like traveling?').toLowerCase();
-
-if (iLoveToTravel === 'yes' || iLoveToTravel === 'y') {
-  //console.log('That is.....almost correct.  I don\'t like traveling, I absolutely LOVE IT!!');
-  alert('That is.....almost correct.  I don\'t like traveling, I absolutely LOVE IT!!');
-} else if (iLoveToTravel === 'no' || iLoveToTravel === 'n') {
-  //console.log('That is correct!  I don\'t like traveling, I absolutely LOVE IT!!');
-  alert('That is correct!  I don\'t like traveling, I absolutely LOVE IT!!');
-  counter++;
-} else {
-  //console.log('Please enter a Yes or No for your answer');
-  alert('Please enter a Yes or No for your answer');
+function doILoveToTravel() {
+  let iLoveToTravel = prompt('Do I like traveling?').toLowerCase();
+  if (iLoveToTravel === 'yes' || iLoveToTravel === 'y') {
+    //console.log('That is.....almost correct.  I don\'t like traveling, I absolutely LOVE IT!!');
+    alert('That is.....almost correct.  I don\'t like traveling, I absolutely LOVE IT!!');
+  } else if (iLoveToTravel === 'no' || iLoveToTravel === 'n') {
+    //console.log('That is correct!  I don\'t like traveling, I absolutely LOVE IT!!');
+    alert('That is correct!  I don\'t like traveling, I absolutely LOVE IT!!');
+    counter++;
+  } else {
+    //console.log('Please enter a Yes or No for your answer');
+    alert('Please enter a Yes or No for your answer');
+  }
 }
+doILoveToTravel();
+
 let doIWoodwork = prompt('Do you think I know how to use power tools?').toLowerCase();
 
 if (doIWoodwork === 'yes' || doIWoodwork === 'y') {

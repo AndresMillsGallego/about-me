@@ -2,8 +2,9 @@
 
 **About Me - with a guessing game**
 
- - Project by Andres Mills Gallego
- - Code Fellows 201
+- Project by Andres Mills Gallego
+ **Lab 04: Driver: Angela; Navigator: Andres** Worked together to include functions in questions
+- Code Fellows 201
 
 ## Learning Journal Notes
 

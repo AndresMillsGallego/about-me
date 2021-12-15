@@ -72,19 +72,22 @@ function doILoveToTravel() {
 }
 doILoveToTravel();
 
-let doIWoodwork = prompt('Do you think I know how to use power tools?').toLowerCase();
-
-if (doIWoodwork === 'yes' || doIWoodwork === 'y') {
-  //console.log('That is correct!  I have been using power tools and working with wood since I was a kid.');
-  alert('That is correct!  I have been using power tools and working with wood since I was a kid.');
-  counter++;
-} else if (doIWoodwork === 'no' || doIWoodwork === 'n') {
-  //console.log('That is incorrect.  I have been using power tools and working with wood since I was a kid.');
-  alert('That is incorrect.  I have been using power tools and working with wood since I was a kid.');
-} else {
-  //console.log('Please enter a Yes or No for your answer');
-  alert('Please enter a Yes or No for your answer');
+function whatIDo() {
+  let doIWoodwork = prompt('Do you think I know how to use power tools?').toLowerCase();
+  if (doIWoodwork === 'yes' || doIWoodwork === 'y') {
+    //console.log('That is correct!  I have been using power tools and working with wood since I was a kid.');
+    alert('That is correct!  I have been using power tools and working with wood since I was a kid.');
+    counter++;
+  } else if (doIWoodwork === 'no' || doIWoodwork === 'n') {
+    //console.log('That is incorrect.  I have been using power tools and working with wood since I was a kid.');
+    alert('That is incorrect.  I have been using power tools and working with wood since I was a kid.');
+  } else {
+    //console.log('Please enter a Yes or No for your answer');
+    alert('Please enter a Yes or No for your answer');
+  }
 }
+whatIDo();
+
 alert('Nice Job! You got ' + counter + ' out of 5 correct so far.');
 alert('I will give you one for free...I am currently married.');
 

@@ -40,19 +40,22 @@ function myLanguages() {
 }
 myLanguages();
 
-let favFood = prompt('Do I LOVE Sushi?').toLowerCase();
-
-if (favFood === 'yes' || favFood === 'y') {
-  //console.log('That is correct!  I love Sushi, it is my favorite food.');
-  alert('That is correct!  I love Sushi, it is my favorite food.');
-  counter++;
-} else if (favFood === 'no' || favFood === 'n') {
-  //console.log('That is incorrect.  Sushi is without a doubt my favorite food.');
-  alert('That is incorrect.  Sushi is without a doubt my favorite food.');
-} else {
-  //console.log('Please enter a Yes or No for your answer');
-  alert('Please enter a Yes or No for your answer');
+function doILikeSushi() {
+  let favFood = prompt('Do I LOVE Sushi?').toLowerCase();
+  if (favFood === 'yes' || favFood === 'y') {
+    //console.log('That is correct!  I love Sushi, it is my favorite food.');
+    alert('That is correct!  I love Sushi, it is my favorite food.');
+    counter++;
+  } else if (favFood === 'no' || favFood === 'n') {
+    //console.log('That is incorrect.  Sushi is without a doubt my favorite food.');
+    alert('That is incorrect.  Sushi is without a doubt my favorite food.');
+  } else {
+    //console.log('Please enter a Yes or No for your answer');
+    alert('Please enter a Yes or No for your answer');
+  }
 }
+doILikeSushi();
+
 let iLoveToTravel = prompt('Do I like traveling?').toLowerCase();
 
 if (iLoveToTravel === 'yes' || iLoveToTravel === 'y') {

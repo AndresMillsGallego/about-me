@@ -23,19 +23,23 @@ function whereWasIBorn() {
   }
 }
 whereWasIBorn();
-let diffLang = prompt('Do I speak another language?').toLowerCase();
 
-if (diffLang === 'yes' || diffLang === 'y') {
-  //console.log('That is correct!  I also speak Spanish and French.');
-  alert('That is correct!  I also speak Spanish and French.');
-  counter++;
-} else if (diffLang === 'no' || diffLang === 'n') {
-  //console.log('That is incorrect.  I also speak Spanish and French.');
-  alert('That is incorrect.  I also speak Spanish and French.');
-} else {
-  //console.log('Please enter a Yes or No for your answer');
-  alert('Please enter a Yes or No for your answer');
+function myLanguages() {
+  let diffLang = prompt('Do I speak another language?').toLowerCase();
+  if (diffLang === 'yes' || diffLang === 'y') {
+    //console.log('That is correct!  I also speak Spanish and French.');
+    alert('That is correct!  I also speak Spanish and French.');
+    counter++;
+  } else if (diffLang === 'no' || diffLang === 'n') {
+    //console.log('That is incorrect.  I also speak Spanish and French.');
+    alert('That is incorrect.  I also speak Spanish and French.');
+  } else {
+    //console.log('Please enter a Yes or No for your answer');
+    alert('Please enter a Yes or No for your answer');
+  }
 }
+myLanguages();
+
 let favFood = prompt('Do I LOVE Sushi?').toLowerCase();
 
 if (favFood === 'yes' || favFood === 'y') {

@@ -91,29 +91,32 @@ whatIDo();
 alert('Nice Job! You got ' + counter + ' out of 5 correct so far.');
 alert('I will give you one for free...I am currently married.');
 
-let myMarriageLength = 20;
-//let marriageGuessCounter = 0; //Going to work on this later....
-let marriageGuesses = 3; // Working on this now! 12/13/21
-for (let guesses = 0; guesses < 4; guesses++) {
-  let howLongHaveIBeenMarried = prompt('How long do you think I have been married? (Enter number of years)');
-  let howLongHaveIBeenMarriedInt = parseInt(howLongHaveIBeenMarried);
-  if (howLongHaveIBeenMarriedInt < myMarriageLength) {
-    alert(`That is too low.  You have ${marriageGuesses} left.`);
-    marriageGuesses--;
-  } else if (howLongHaveIBeenMarriedInt > myMarriageLength) {
-    alert(`That is too high.  You have ${marriageGuesses} left.`);
-    marriageGuesses--;
-  } else if (howLongHaveIBeenMarriedInt === myMarriageLength) {
-    alert(`That is just right, and correct!  I have been married for ${myMarriageLength} years.`);
-    counter++;
-    break;
-  } else {
-    alert('Hmmmm not sure what happened here beep boop beep');
-  }
-  if (guesses === 3) {
-    alert('Shucks, you ran out of guesses!  The correct answer is 20 years, OMG!');
+function yearsMarried() {
+  let myMarriageLength = 20;
+  //let marriageGuessCounter = 0; //Going to work on this later....
+  let marriageGuesses = 3; // Working on this now! 12/13/21
+  for (let guesses = 0; guesses < 4; guesses++) {
+    let howLongHaveIBeenMarried = prompt('How long do you think I have been married? (Enter number of years)');
+    let howLongHaveIBeenMarriedInt = parseInt(howLongHaveIBeenMarried);
+    if (howLongHaveIBeenMarriedInt < myMarriageLength) {
+      alert(`That is too low.  You have ${marriageGuesses} left.`);
+      marriageGuesses--;
+    } else if (howLongHaveIBeenMarriedInt > myMarriageLength) {
+      alert(`That is too high.  You have ${marriageGuesses} left.`);
+      marriageGuesses--;
+    } else if (howLongHaveIBeenMarriedInt === myMarriageLength) {
+      alert(`That is just right, and correct!  I have been married for ${myMarriageLength} years.`);
+      counter++;
+      break;
+    } else {
+      alert('Hmmmm not sure what happened here beep boop beep');
+    }
+    if (guesses === 3) {
+      alert('Shucks, you ran out of guesses!  The correct answer is 20 years, OMG!');
+    }
   }
 }
+yearsMarried();
 
 alert('How about a question that has more than one right answer?');
 

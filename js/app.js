@@ -121,25 +121,28 @@ yearsMarried();
 alert('How about a question that has more than one right answer?');
 
 //This next part drove me nuts. I think I tried to make it more complicated than it needed to be. Ryan was a huge help.
-let favoriteFoods = ['pizza', 'empanadas', 'pho', 'tamales', 'cake'];
-let answeredCorrectly = false;
-let userGuesses = 0;
-while (userGuesses < 6 && !answeredCorrectly) {
-  let foodGuess = prompt('So...other than Sushi, what do you think another one of my favorite foods could be?');
+function myFavoriteFoods() {
+  let favoriteFoods = ['pizza', 'empanadas', 'pho', 'tamales', 'cake'];
+  let answeredCorrectly = false;
+  let userGuesses = 0;
+  while (userGuesses < 6 && !answeredCorrectly) {
+    let foodGuess = prompt('So...other than Sushi, what do you think another one of my favorite foods could be?');
 
-  for (let x = 0; x < favoriteFoods.length; x++) {
-    if (favoriteFoods[x] === foodGuess) {
-      let correctGuess = foodGuess;
-      alert(`That is correct, ${correctGuess} is one of my favorite foods!   My favorite foods are ${favoriteFoods.slice(0, 3).join(', ')}, and ${favoriteFoods[4]}.`);
-      answeredCorrectly = true;
-      counter++;
+    for (let x = 0; x < favoriteFoods.length; x++) {
+      if (favoriteFoods[x] === foodGuess) {
+        let correctGuess = foodGuess;
+        alert(`That is correct, ${correctGuess} is one of my favorite foods!   My favorite foods are ${favoriteFoods.slice(0, 3).join(', ')}, and ${favoriteFoods[4]}.`);
+        answeredCorrectly = true;
+        counter++;
+      }
+    }
+    userGuesses++;
+    if (userGuesses === 6) {
+      alert(`Dang!  You ran out of guesses.  My favorite foods are ${favoriteFoods.slice(0, 3).join(', ')}, and ${favoriteFoods[4]}.`); // Made sense to stick with the theme and add an alert for this. Also changed the alert for this and the correct guess to include the array.  Messed around with.slice and .join to make the sentence read more like normal English.
     }
   }
-  userGuesses++;
-  if (userGuesses === 6) {
-    alert(`Dang!  You ran out of guesses.  My favorite foods are ${favoriteFoods.slice(0, 3).join(', ')}, and ${favoriteFoods[4]}.`); // Made sense to stick with the theme and add an alert for this. Also changed the alert for this and the correct guess to include the array.  Messed around with.slice and .join to make the sentence read more like normal English.
-  }
 }
+myFavoriteFoods();
 // let favoriteFoodsString = favoriteFoods.join(', ');
 // alert(`Here is a full list of my favorite foods ${favoriteFoodsString}.`); // I did follow the assignment instructions and I did not add this function til after I already turned in Lab 03 (looks so much better now)  :)
 

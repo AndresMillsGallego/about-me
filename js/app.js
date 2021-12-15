@@ -2,24 +2,27 @@
 console.log('Hello Sheyna and Amelia!');
 
 let userName = prompt('Hello! What is your name?');
-alert('Welcome to my site ' +userName+ '!');
+alert('Welcome to my site ' + userName + '!');
 alert('Please answer the following questions. (Yes/No answers please');
 //document.write('Welcome to my site ' +userName+ '!'); I don't like "document.write" There has to be a better way.
 
 let counter = 0;
-let wasIBornHere = prompt('Was I born in the United States?').toLowerCase();
-//console.log(wasIBornHere);
-if (wasIBornHere === 'yes' || wasIBornHere === 'y') {
-  //console.log
-  alert('That is incorrect.  I was born in Colombia.');
-} else if (wasIBornHere === 'no' || wasIBornHere === 'n') {
-  //console.log('That is correct!  I was born in Colombia.');
-  alert('That is correct!  I was born in Colombia.');
-  counter++;
-} else {
-  //console.log('Please enter a Yes or No for your answer.');
-  alert('Please enter a Yes or No for your answer.');
+function whereWasIBorn() {
+  let wasIBornHere = prompt('Was I born in the United States?').toLowerCase();
+  //console.log(wasIBornHere);
+  if (wasIBornHere === 'yes' || wasIBornHere === 'y') {
+    //console.log
+    alert('That is incorrect.  I was born in Colombia.');
+  } else if (wasIBornHere === 'no' || wasIBornHere === 'n') {
+    //console.log('That is correct!  I was born in Colombia.');
+    alert('That is correct!  I was born in Colombia.');
+    counter++;
+  } else {
+    //console.log('Please enter a Yes or No for your answer.');
+    alert('Please enter a Yes or No for your answer.');
+  }
 }
+whereWasIBorn();
 let diffLang = prompt('Do I speak another language?').toLowerCase();
 
 if (diffLang === 'yes' || diffLang === 'y') {
@@ -72,7 +75,7 @@ if (doIWoodwork === 'yes' || doIWoodwork === 'y') {
   //console.log('Please enter a Yes or No for your answer');
   alert('Please enter a Yes or No for your answer');
 }
-alert('Nice Job! You got ' +counter+ ' out of 5 correct so far.');
+alert('Nice Job! You got ' + counter + ' out of 5 correct so far.');
 alert('I will give you one for free...I am currently married.');
 
 let myMarriageLength = 20;
@@ -111,14 +114,14 @@ while (userGuesses < 6 && !answeredCorrectly) {
   for (let x = 0; x < favoriteFoods.length; x++) {
     if (favoriteFoods[x] === foodGuess) {
       let correctGuess = foodGuess;
-      alert(`That is correct, ${correctGuess} is one of my favorite foods!   My favorite foods are ${favoriteFoods.slice(0,3).join(', ')}, and ${favoriteFoods[4]}.`);
+      alert(`That is correct, ${correctGuess} is one of my favorite foods!   My favorite foods are ${favoriteFoods.slice(0, 3).join(', ')}, and ${favoriteFoods[4]}.`);
       answeredCorrectly = true;
       counter++;
     }
   }
   userGuesses++;
   if (userGuesses === 6) {
-    alert(`Dang!  You ran out of guesses.  My favorite foods are ${favoriteFoods.slice(0,3).join(', ')}, and ${favoriteFoods[4]}.`); // Made sense to stick with the theme and add an alert for this. Also changed the alert for this and the correct guess to include the array.  Messed around with.slice and .join to make the sentence read more like normal English.
+    alert(`Dang!  You ran out of guesses.  My favorite foods are ${favoriteFoods.slice(0, 3).join(', ')}, and ${favoriteFoods[4]}.`); // Made sense to stick with the theme and add an alert for this. Also changed the alert for this and the correct guess to include the array.  Messed around with.slice and .join to make the sentence read more like normal English.
   }
 }
 // let favoriteFoodsString = favoriteFoods.join(', ');
@@ -126,11 +129,11 @@ while (userGuesses < 6 && !answeredCorrectly) {
 
 // Below I coded 3 different options based on the user's score
 if (counter <= 2) {
-  alert('Hmmmm, you can do better than that.  You scored ' +counter+ ' out of 7');
+  alert('Hmmmm, you can do better than that.  You scored ' + counter + ' out of 7');
 } else if (counter > 2 && counter < 5) {
-  alert('Not bad....  You scored ' +counter+ ' out of 7');
+  alert('Not bad....  You scored ' + counter + ' out of 7');
 } else if (counter >= 5) {
-  alert('Wow! Its like you already know me.  You scored ' +counter+ ' out of 7');
+  alert('Wow! Its like you already know me.  You scored ' + counter + ' out of 7');
 }
 
 alert('Ok, one last guessing game.  You have 3 tries only this time!');
@@ -145,7 +148,7 @@ for (let n = 0; n < 3; n++) {
     alert('Yes!  Excellent guess!');
     break;
   } else if (guessInt !== correctNumber) {
-    alert(`Hmmm, not quite, you have ${userNumGuess-1} guesses left.`);
+    alert(`Hmmm, not quite, you have ${userNumGuess - 1} guesses left.`);
     userNumGuess--;
   } // Want to add a message to user if all guesses are used up, then tell them the correct number.
 } if (userNumGuess === 0) {
@@ -161,11 +164,11 @@ function goodbyeMessage() {
 // eslint-disable-next-line no-unused-vars
 function highScore() {
   if (counter <= 2) {
-    alert('Hmmmm, you can do better than that.  You scored ' +counter+ ' out of 7');
+    alert('Hmmmm, you can do better than that.  You scored ' + counter + ' out of 7');
   } else if (counter > 2 && counter < 5) {
-    alert('Not bad....  You scored ' +counter+ ' out of 7');
+    alert('Not bad....  You scored ' + counter + ' out of 7');
   } else if (counter >= 5) {
-    alert('Wow! Its like you already know me.  You scored ' +counter+ ' out of 7');
+    alert('Wow! Its like you already know me.  You scored ' + counter + ' out of 7');
   }
 }
 

@@ -19,20 +19,18 @@ h1 {
   margin: 1rem;
  }
 
+ h4 {
+   border-bottom: solid midnightblue .25rem;
+   border-radius: 3rem;
+   padding-bottom: 2rem;
+ }
 .sub-headers {
    font-size: 4rem;
    color: crimson;
    text-align: center;
    margin: 1rem;
  }
- 
- b {
-   font-size: 2rem;
-   color: midnightblue;
-   padding: 2rem;
-   margin: 2rem;
- }
-
+  
 section {
   overflow: hidden;
   padding: 2rem;
@@ -44,7 +42,8 @@ section {
 }
 
 div {
-  margin: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
   padding: 1rem;
   display: inline-block;
   text-align: center;
@@ -71,7 +70,6 @@ p {
 
 ul {
   margin-left: 2rem;
-  padding-top: 1rem;
   font-size: 1.5rem;
   list-style-type: disc;
 }

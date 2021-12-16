@@ -6,87 +6,105 @@ alert('Welcome to my site ' + userName + '!');
 alert('Please answer the following questions. (Yes/No answers please');
 //document.write('Welcome to my site ' +userName+ '!'); I don't like "document.write" There has to be a better way.
 
+let yesOrNoQuestions = ['Was I born in the United States?', 'Do I speak another language?', 'Do I LOVE Sushi?', 'Do I like traveling?', 'Do you think I know how to use power tools?'];
+let correctAnswers = ['no', 'yes', 'yes', 'no', 'yes'];
+let questionResponses = ['That is correct!', 'That is incorrect.'];
 let counter = 0;
-function whereWasIBorn() {
-  let wasIBornHere = prompt('Was I born in the United States?').toLowerCase();
-  //console.log(wasIBornHere);
-  if (wasIBornHere === 'yes' || wasIBornHere === 'y') {
-    //console.log
-    alert('That is incorrect.  I was born in Colombia.');
-  } else if (wasIBornHere === 'no' || wasIBornHere === 'n') {
-    //console.log('That is correct!  I was born in Colombia.');
-    alert('That is correct!  I was born in Colombia.');
-    counter++;
-  } else {
-    //console.log('Please enter a Yes or No for your answer.');
-    alert('Please enter a Yes or No for your answer.');
-  }
-}
-whereWasIBorn();
 
-function myLanguages() {
-  let diffLang = prompt('Do I speak another language?').toLowerCase();
-  if (diffLang === 'yes' || diffLang === 'y') {
-    //console.log('That is correct!  I also speak Spanish and French.');
-    alert('That is correct!  I also speak Spanish and French.');
-    counter++;
-  } else if (diffLang === 'no' || diffLang === 'n') {
-    //console.log('That is incorrect.  I also speak Spanish and French.');
-    alert('That is incorrect.  I also speak Spanish and French.');
-  } else {
-    //console.log('Please enter a Yes or No for your answer');
-    alert('Please enter a Yes or No for your answer');
+function askQuestion(){
+  for (let i = 0; i < yesOrNoQuestions.length; i++){
+    let userAnswer = prompt(yesOrNoQuestions[i]).toLowerCase();
+    if (userAnswer === correctAnswers[i]){
+      alert(questionResponses[0]);
+      counter++;
+    } else if (userAnswer !== correctAnswers[i]){
+      alert(questionResponses[1]);
+    } else {
+      alert('Error, Error');
+    }
   }
 }
-myLanguages();
+askQuestion();
+// function whereWasIBorn() {
+//   let wasIBornHere = prompt('Was I born in the United States?').toLowerCase();
+//   //console.log(wasIBornHere);
+//   if (wasIBornHere === 'yes' || wasIBornHere === 'y') {
+//     //console.log
+//     alert('That is incorrect.  I was born in Colombia.');
+//   } else if (wasIBornHere === 'no' || wasIBornHere === 'n') {
+//     //console.log('That is correct!  I was born in Colombia.');
+//     alert('That is correct!  I was born in Colombia.');
+//     counter++;
+//   } else {
+//     //console.log('Please enter a Yes or No for your answer.');
+//     alert('Please enter a Yes or No for your answer.');
+//   }
+// }
+// whereWasIBorn();
 
-function doILikeSushi() {
-  let favFood = prompt('Do I LOVE Sushi?').toLowerCase();
-  if (favFood === 'yes' || favFood === 'y') {
-    //console.log('That is correct!  I love Sushi, it is my favorite food.');
-    alert('That is correct!  I love Sushi, it is my favorite food.');
-    counter++;
-  } else if (favFood === 'no' || favFood === 'n') {
-    //console.log('That is incorrect.  Sushi is without a doubt my favorite food.');
-    alert('That is incorrect.  Sushi is without a doubt my favorite food.');
-  } else {
-    //console.log('Please enter a Yes or No for your answer');
-    alert('Please enter a Yes or No for your answer');
-  }
-}
-doILikeSushi();
+// function myLanguages() {
+//   let diffLang = prompt('Do I speak another language?').toLowerCase();
+//   if (diffLang === 'yes' || diffLang === 'y') {
+//     //console.log('That is correct!  I also speak Spanish and French.');
+//     alert('That is correct!  I also speak Spanish and French.');
+//     counter++;
+//   } else if (diffLang === 'no' || diffLang === 'n') {
+//     //console.log('That is incorrect.  I also speak Spanish and French.');
+//     alert('That is incorrect.  I also speak Spanish and French.');
+//   } else {
+//     //console.log('Please enter a Yes or No for your answer');
+//     alert('Please enter a Yes or No for your answer');
+//   }
+// }
+// myLanguages();
 
-function doILoveToTravel() {
-  let iLoveToTravel = prompt('Do I like traveling?').toLowerCase();
-  if (iLoveToTravel === 'yes' || iLoveToTravel === 'y') {
-    //console.log('That is.....almost correct.  I don\'t like traveling, I absolutely LOVE IT!!');
-    alert('That is.....almost correct.  I don\'t like traveling, I absolutely LOVE IT!!');
-  } else if (iLoveToTravel === 'no' || iLoveToTravel === 'n') {
-    //console.log('That is correct!  I don\'t like traveling, I absolutely LOVE IT!!');
-    alert('That is correct!  I don\'t like traveling, I absolutely LOVE IT!!');
-    counter++;
-  } else {
-    //console.log('Please enter a Yes or No for your answer');
-    alert('Please enter a Yes or No for your answer');
-  }
-}
-doILoveToTravel();
+// function doILikeSushi() {
+//   let favFood = prompt('Do I LOVE Sushi?').toLowerCase();
+//   if (favFood === 'yes' || favFood === 'y') {
+//     //console.log('That is correct!  I love Sushi, it is my favorite food.');
+//     alert('That is correct!  I love Sushi, it is my favorite food.');
+//     counter++;
+//   } else if (favFood === 'no' || favFood === 'n') {
+//     //console.log('That is incorrect.  Sushi is without a doubt my favorite food.');
+//     alert('That is incorrect.  Sushi is without a doubt my favorite food.');
+//   } else {
+//     //console.log('Please enter a Yes or No for your answer');
+//     alert('Please enter a Yes or No for your answer');
+//   }
+// }
+// doILikeSushi();
 
-function whatIDo() {
-  let doIWoodwork = prompt('Do you think I know how to use power tools?').toLowerCase();
-  if (doIWoodwork === 'yes' || doIWoodwork === 'y') {
-    //console.log('That is correct!  I have been using power tools and working with wood since I was a kid.');
-    alert('That is correct!  I have been using power tools and working with wood since I was a kid.');
-    counter++;
-  } else if (doIWoodwork === 'no' || doIWoodwork === 'n') {
-    //console.log('That is incorrect.  I have been using power tools and working with wood since I was a kid.');
-    alert('That is incorrect.  I have been using power tools and working with wood since I was a kid.');
-  } else {
-    //console.log('Please enter a Yes or No for your answer');
-    alert('Please enter a Yes or No for your answer');
-  }
-}
-whatIDo();
+// function doILoveToTravel() {
+//   let iLoveToTravel = prompt('Do I like traveling?').toLowerCase();
+//   if (iLoveToTravel === 'yes' || iLoveToTravel === 'y') {
+//     //console.log('That is.....almost correct.  I don\'t like traveling, I absolutely LOVE IT!!');
+//     alert('That is.....almost correct.  I don\'t like traveling, I absolutely LOVE IT!!');
+//   } else if (iLoveToTravel === 'no' || iLoveToTravel === 'n') {
+//     //console.log('That is correct!  I don\'t like traveling, I absolutely LOVE IT!!');
+//     alert('That is correct!  I don\'t like traveling, I absolutely LOVE IT!!');
+//     counter++;
+//   } else {
+//     //console.log('Please enter a Yes or No for your answer');
+//     alert('Please enter a Yes or No for your answer');
+//   }
+// }
+// doILoveToTravel();
+
+// function whatIDo() {
+//   let doIWoodwork = prompt('Do you think I know how to use power tools?').toLowerCase();
+//   if (doIWoodwork === 'yes' || doIWoodwork === 'y') {
+//     //console.log('That is correct!  I have been using power tools and working with wood since I was a kid.');
+//     alert('That is correct!  I have been using power tools and working with wood since I was a kid.');
+//     counter++;
+//   } else if (doIWoodwork === 'no' || doIWoodwork === 'n') {
+//     //console.log('That is incorrect.  I have been using power tools and working with wood since I was a kid.');
+//     alert('That is incorrect.  I have been using power tools and working with wood since I was a kid.');
+//   } else {
+//     //console.log('Please enter a Yes or No for your answer');
+//     alert('Please enter a Yes or No for your answer');
+//   }
+// }
+// whatIDo();
 
 alert('Nice Job! You got ' + counter + ' out of 5 correct so far.');
 alert('I will give you one for free...I am currently married.');

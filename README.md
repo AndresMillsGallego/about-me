@@ -1,11 +1,19 @@
-# Lab 02
+# Lab 02, 03 and 04
 
 **About Me - with a guessing game**
 
-- Project by Andres Mills Gallego
- **Lab 04: Driver: Angela; Navigator: Andres** Worked together to include functions in questions
+- Project by Andres Mills Gallego with collaboration from Angela Jackson
+ 
+ **Lab 04:** Driver: Angela; Navigator: Andres 
+ 
+Worked together to include functions in questions.
+
+Day 2 of lab we worked on the stretch goals to make our 5 question guessing game more efficient.  
 - Code Fellows 201
 
+Here is a screenshot from [W3C Validation Service](https://validator.w3.org/)
+
+![Lab 04 W3C](https://user-images.githubusercontent.com/90275542/146311566-849de53d-2133-4732-9fd5-d5b94bb268af.png)
 ## Learning Journal Notes
 
 **First _real_ lab**
@@ -23,3 +31,7 @@ This lab was a lot of fun, I can see it getting more challenging.  I think it we
 My observation is to sometimes take a step back.  Ryan Gallaway was kind enough to help me through part 2 of this lab.  After seeing how the code should work I think I had been trying to make it *far* more complicated than it needed to be.  
 
 I spent longer than I should have for sure.  Something that I need to work on moving forward is asking for help much sooner.  Its not really in my nature to do so, but it is something that I am at least self aware of enough to admit and make the attempt to improve.  I can fully admit it took me longer than I thought, but if I had asked for help sooner I would not have struggled for so long.  
+
+#### Lab 04
+
+Pair programming seems to me to be a very efficient and productive way to code.  I am extremely hands on usually, it was nice to be forced into the `Navigator` role as it offeres a very different view.  

@@ -121,15 +121,14 @@ function yearsMarried() {
   //let marriageGuessCounter = 0; //Going to work on this later....
   let marriageGuesses = 3; // Working on this now! 12/13/21, glad it worked
   for (let guesses = 0; guesses < 4; guesses++) {
-    let howLongHaveIBeenMarried = prompt('How long do you think I have been married? (Enter number of years)');
-    let howLongHaveIBeenMarriedInt = parseInt(howLongHaveIBeenMarried);
-    if (howLongHaveIBeenMarriedInt < myMarriageLength) {
-      alert(`That is too low.  You have ${marriageGuesses} left.`);
+    let howLongHaveIBeenMarried = +prompt('How long do you think I have been married? (Enter number of years)');
+    if (howLongHaveIBeenMarried < myMarriageLength) {
+      alert(`That is too low.  You have ${marriageGuesses} guesses left.`);
       marriageGuesses--;
-    } else if (howLongHaveIBeenMarriedInt > myMarriageLength) {
-      alert(`That is too high.  You have ${marriageGuesses} left.`);
+    } else if (howLongHaveIBeenMarried > myMarriageLength) {
+      alert(`That is too high.  You have ${marriageGuesses} guessesleft.`);
       marriageGuesses--;
-    } else if (howLongHaveIBeenMarriedInt === myMarriageLength) {
+    } else if (howLongHaveIBeenMarried === myMarriageLength) {
       alert(`That is just right, and correct!  I have been married for ${myMarriageLength} years.`);
       counter++;
       break;
@@ -152,7 +151,6 @@ function myFavoriteFoods() {
   let userGuesses = 0;
   while (userGuesses < 6 && !answeredCorrectly) {
     let foodGuess = prompt('So...other than Sushi, what do you think another one of my favorite foods could be?');
-
     for (let x = 0; x < favoriteFoods.length; x++) {
       if (favoriteFoods[x] === foodGuess) {
         let correctGuess = foodGuess;
@@ -182,22 +180,22 @@ if (counter <= 2) {
 
 alert('Ok, one last guessing game.  You have 3 tries only this time!');
 
+let userNumGuess = 3;
 function guessMyNumber() {
   let correctNumber = Math.floor(Math.random() * 10 + 1); //generates the random number
-  console.log(correctNumber); //console log it to make sure its working!
-  let userNumGuess = 3;
+  //console.log(correctNumber); //console log it to make sure its working!
   for (let n = 0; n < 3; n++) {
-    let numGuess = prompt('I am thinking of a number between 1-10. What do you think it is?');
-    let guessInt = parseInt(numGuess);
-    if (guessInt === correctNumber) {
-      alert('Yes!  Excellent guess!');
+    let numGuess = +prompt('I am thinking of a number between 1-10. What do you think it is?');
+    if (numGuess === correctNumber) {
+      alert(`Yes!  Excellent guess!  My number was ${correctNumber}`);
       break;
-    } else if (guessInt !== correctNumber) {
-      alert(`Hmmm, not quite, you have ${userNumGuess - 1} guesses left.`);
+    } else if (numGuess !== correctNumber) {
+      alert(`Hmmm, not quite, you have ${userNumGuess-1} guesses left.`);
       userNumGuess--;
-    } // Want to add a message to user if all guesses are used up, then tell them the correct number.
-  } if (userNumGuess === 0) {
-    alert(`Good guesses!  My number was actually ${correctNumber}`);
+    }
+  }
+  if (userNumGuess === 0) {
+    alert(`You get an "A" for effort, but my number was actually ${correctNumber}`);
   }
 }
 guessMyNumber();

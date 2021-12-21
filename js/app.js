@@ -2,7 +2,7 @@
 console.log('Hello Sheyna and Amelia!');
 //Dec 12 changed applicable strings to template literal
 let userName = prompt('Hello! What is your name?');
-alert(`Welcom to my site ${userName}!`);
+alert(`Welcome to my site ${userName}!`);
 alert(`Please answer the following questions. 
         (Yes/No answers please)`);
 //document.write('Welcome to my site ' +userName+ '!'); I don't like "document.write" There has to be a better way.
@@ -68,18 +68,23 @@ alert('How about a question that has more than one right answer?');
 function myFavoriteFoods() {
   let favoriteFoods = ['pizza', 'empanadas', 'pho', 'tamales', 'cake'];
   let answeredCorrectly = false;
-  let userGuesses = 0;
+  let userGuesses = 1;
+  let correctGuess;
+  let foodGuess = prompt('So...other than Sushi, what do you think another one of my favorite foods could be?');
   while (userGuesses < 6 && !answeredCorrectly) {
-    let foodGuess = prompt('So...other than Sushi, what do you think another one of my favorite foods could be?');
     for (let x = 0; x < favoriteFoods.length; x++) {
       if (favoriteFoods[x] === foodGuess) {
-        let correctGuess = foodGuess;
-        alert(`That is correct, ${correctGuess} is one of my favorite foods!   My favorite foods are ${favoriteFoods.slice(0, 3).join(', ')}, and ${favoriteFoods[4]}.`);
-        answeredCorrectly = true;
-        counter++;
+        correctGuess = foodGuess;
       }
     }
-    userGuesses++;
+    if (foodGuess === correctGuess) {
+      alert(`That is correct, ${correctGuess} is one of my favorite foods!   My favorite foods are ${favoriteFoods.slice(0, 3).join(', ')}, and ${favoriteFoods[4]}.`);
+      answeredCorrectly = true;
+      counter++;
+    } else {
+      foodGuess = prompt('I am sorry that is incorrect, take another guess.');
+      userGuesses++;
+    }
     if (userGuesses === 6) {
       alert(`Dang!  You ran out of guesses.  My favorite foods are ${favoriteFoods.slice(0, 3).join(', ')}, and ${favoriteFoods[4]}.`); // Made sense to stick with the theme and add an alert for this. Also changed the alert for this and the correct guess to include the array.  Messed around with.slice and .join to make the sentence read more like normal English.
     }

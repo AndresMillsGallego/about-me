@@ -68,10 +68,10 @@ alert('How about a question that has more than one right answer?');
 function myFavoriteFoods() {
   let favoriteFoods = ['pizza', 'empanadas', 'pho', 'tamales', 'cake'];
   let answeredCorrectly = false;
-  let userGuesses = 1;
+  let userGuesses = 6;
   let correctGuess;
   let foodGuess = prompt('So...other than Sushi, what do you think another one of my favorite foods could be?');
-  while (userGuesses < 6 && !answeredCorrectly) {
+  while (userGuesses > 0 && !answeredCorrectly) {
     for (let x = 0; x < favoriteFoods.length; x++) {
       if (favoriteFoods[x] === foodGuess) {
         correctGuess = foodGuess;
@@ -82,10 +82,11 @@ function myFavoriteFoods() {
       answeredCorrectly = true;
       counter++;
     } else {
-      foodGuess = prompt('I am sorry that is incorrect, take another guess.');
-      userGuesses++;
+      userGuesses--;
+      foodGuess = prompt(`I am sorry that is incorrect, you have ${userGuesses} guesses left.  
+      Take another guess`);
     }
-    if (userGuesses === 6) {
+    if (userGuesses === 0) {
       alert(`Dang!  You ran out of guesses.  My favorite foods are ${favoriteFoods.slice(0, 3).join(', ')}, and ${favoriteFoods[4]}.`); // Made sense to stick with the theme and add an alert for this. Also changed the alert for this and the correct guess to include the array.  Messed around with.slice and .join to make the sentence read more like normal English.
     }
   }
